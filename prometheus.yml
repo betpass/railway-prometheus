@@ -20,7 +20,7 @@ scrape_configs:
     scheme: https
     authorization:
       type: ApiKey
-      credentials: ${AFFILIAPASS_API_KEY}
+      credentials_file: /etc/prometheus/secrets/affiliapass_api_key
     static_configs:
       - targets: ['api.affiliapass.com']
       
