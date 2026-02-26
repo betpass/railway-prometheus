@@ -14,3 +14,13 @@ scrape_configs:
     scheme: https
     static_configs:
       - targets: ['grafana.affiliapass.com']
+
+  - job_name: 'nodejs-api'
+    metrics_path: /monitoring/metrics
+    scheme: https
+    authorization:
+      type: Bearer
+      credentials: ${AFFILIAPASS_API_KEY}
+    static_configs:
+      - targets: ['api.affiliapass.com']
+      
