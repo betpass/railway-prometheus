@@ -19,7 +19,7 @@ scrape_configs:
     metrics_path: /monitoring/metrics
     scheme: https
     authorization:
-      type: Bearer
+      type: ApiKey
       credentials: ${AFFILIAPASS_API_KEY}
     static_configs:
       - targets: ['api.affiliapass.com']
