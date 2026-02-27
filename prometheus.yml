@@ -23,4 +23,9 @@ scrape_configs:
       credentials_file: /etc/prometheus/secrets/affiliapass_api_key
     static_configs:
       - targets: ['api.affiliapass.com']
-      
+
+  - job_name: 'postgres'
+    metrics_path: /metrics
+    scheme: https
+    static_configs:
+      - targets: ['postgres-metrics-collector-production-875f.up.railway.app']
